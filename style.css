@@ -10,7 +10,7 @@ body {
 
 * {
     /* borders for debugging */
-    border: 1px solid blue; 
+    /* border: 1px solid blue;  */
 }
 
 svg {
@@ -21,9 +21,8 @@ svg {
 
 .content-container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: .5fr 1fr 1fr 1fr;
     grid-template-rows: 1 fr 3fr;
-    /* grid-auto-flow: column; */
 }
 
 .sidebar {
@@ -51,8 +50,20 @@ svg {
 }
 
 .header {
+    padding: 1em;
     grid-column: 2 / 5;
     grid-row: 1 / 1;
+    box-shadow: 0px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.searchbar-section {
+    display: flex;
+    gap: 1em;
+}
+
+.magnify {
+    height: 2em;
+    width: 1.25em;
 }
 
 .search-bar {
@@ -63,6 +74,7 @@ svg {
   padding: 6px 12px;
   width: 100%;
   max-width: 400px;
+  height: 1em;
 }
 
 .search-bar input {
@@ -88,26 +100,67 @@ svg {
 }
 
 .cards {
+    padding: 1em;
     grid-column: 2 / 5;
     display: grid;
+    gap: 1em;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: repeat(1,1fr);
-
+    grid-template-rows: 1fr;
+    background-color: rgb(178, 212, 252);
 }
-
-/* .your_projects {
-    grid-row: 1;
-    grid-column: 1 /4;
-} */
 
 .cards-left-side {
     grid-column: 1 / 3;
+    /* grid-row: 1 / 2; */
+}
+
+.cards-left-side h3 {
+    grid-column: 1 / 3;
+    grid-row: 1 / 2;
+}
+
+.card1,.card2,.card3,.card4,.card5,.card6 {
+    background-color: white;
+    padding: 1em;
+    border: 1px black solid;
+    border-radius: 3%;
+}
+
+.cards-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* grid-row: 1 / 3; */
+    gap: 2em;
+    grid-row: 1 / 3;
 }
 
 .cards-right-side {
+    grid-row: 1 / 3;
+    display: grid;
     grid-column: 3 / 4;
-    /* grid-row: 1 / 3; */
+    gap: 1em;    
+}
+
+.anouncement-cards-container {
+    background-color: white;
+    border: 1px black solid;
+    padding: 1em;
+    border-radius: 3%;
+    text-wrap: wrap;
+}
+
+h4 {
+    margin-bottom: 0;
+}
+
+p {
+    margin-top: 5px;
+}
+
+.trending-cards-container {
+     background-color: white;
+    border: 1px black solid;
+    padding: 1em;
+    border-radius: 3%;
+    display: grid;
+    gap: 1em;
 }
